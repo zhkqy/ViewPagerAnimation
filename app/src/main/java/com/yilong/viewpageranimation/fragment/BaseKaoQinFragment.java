@@ -15,11 +15,6 @@ public abstract class BaseKaoQinFragment extends Fragment {
     protected String index = "";
     protected int type = 0;
 
-    public static int PAY_RECEIVER_PLAN = 1101;
-    public static int PAY_RECEIVER_RECORD = 1102;
-    public static int FA_PIAO_RECORD = 1103;
-
-
     public boolean isHaveSubFragment = false;
 
     public BaseKaoQinFragment() {
@@ -49,18 +44,6 @@ public abstract class BaseKaoQinFragment extends Fragment {
         bundle.putString("keyid", keyid);
         bundle.putInt("type", type);
         this.setArguments(bundle);
-    }
-
-
-    public boolean isHaveSubFragment() {
-        return isHaveSubFragment;
-    }
-
-    public void setHaveSubFragment(boolean haveSubFragment) {
-        isHaveSubFragment = haveSubFragment;
-        Bundle bundle = getArguments();
-        bundle.putBoolean("havesub", isHaveSubFragment);
-        setArguments(bundle);
     }
 
     protected BaseKaoQinFragment(String title, String keyid, String index) {
@@ -110,12 +93,4 @@ public abstract class BaseKaoQinFragment extends Fragment {
         this.type = type;
     }
 
-    public ViewPager getViewPager() {
-        return null;
-    }
-
-    public void setPagerCurrentItem() {
-
-
-    }
 }
